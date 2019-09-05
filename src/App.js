@@ -6,21 +6,22 @@ import Counters from "./components/counters";
 class App extends Component {
   state = {
     counters: [
-      { id: 1, value: 0 },
-      { id: 2, value: 0 },
-      { id: 3, value: 0 },
-      { id: 4, value: 0 }
+      { id: 1, value: 12 },
+      { id: 2, value: 2 },
+      { id: 3, value: 8 },
+      { id: 4, value: 3 }
     ]
   };
   render() {
     return (
       <main className="container">
         <Navbar />
-
-        <Counters
-          key={this.state.counters.id}
-          countersApp={this.state.counters}
-        />
+        <button type="button" className="btn  m-2">
+          Reset
+        </button>
+        {this.state.counters.map(counter => (
+          <Counters key={counter.id} countersApp={this.state.counters} />
+        ))}
       </main>
     );
   }

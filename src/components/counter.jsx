@@ -8,7 +8,9 @@ class Counter extends Component {
           <div className="row p-2 ">
             <div className="col-sm-2">
               <span className="badge badge-secondary">
-                {this.props.counterVal}
+                {this.props.CounterVal.map(count => (
+                  <p> {count.value} </p>
+                ))}
               </span>
             </div>
             <div className="col-sm-10">
