@@ -20,7 +20,11 @@ class App extends Component {
           Reset
         </button>
         {this.state.counters.map(counter => (
-          <Counters key={counter.id} countersApp={this.state.counters} />
+          <Counters
+            key={counter.id}
+            countersApp={this.state.counters}
+            value={counter.value}
+          />
         ))}
       </main>
     );

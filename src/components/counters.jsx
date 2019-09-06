@@ -5,7 +5,7 @@ class Counters extends Component {
   render() {
     return (
       <div>
-        <Counter CounterVal={this.props.countersApp} />
+        <Counter CounterVal={this.props.value} />
       </div>
     );
   }
