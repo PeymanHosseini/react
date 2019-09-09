@@ -5,7 +5,15 @@ class Counters extends Component {
   render() {
     return (
       <div>
-        <Counter CounterVal={this.props.value} />
+        {this.props.countersApp.map(counter => (
+          <Counter
+            key={counter.id}
+            id={counter.id}
+            value={counter.value}
+            onHandleIncrement={this.props.handleIncrement}
+            countera={this.props.countersApp}
+          />
+        ))}
       </div>
     );
   }
