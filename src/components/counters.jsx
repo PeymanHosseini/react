@@ -12,6 +12,7 @@ class Counters extends Component {
             value={counter.value}
             onHandleIncrement={this.props.handleIncrement}
             countera={counter}
+            onHandleDecrement={this.props.handleDecrement}
           />
         ))}
       </div>

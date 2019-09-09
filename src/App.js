@@ -19,6 +19,13 @@ class App extends Component {
     counters[index].value++;
     this.setState({ counters });
   };
+  handleDecrement = counter => {
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    counters[index].value--;
+    this.setState({ counters });
+  };
   render() {
     return (
       <main className="container">
@@ -32,6 +39,7 @@ class App extends Component {
           value={this.state.counters.value}
           id={this.state.counters.id}
           handleIncrement={this.handleIncrement}
+          handleDecrement={this.handleDecrement}
         />
       </main>
     );
