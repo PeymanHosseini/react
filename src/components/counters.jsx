@@ -11,7 +11,7 @@ class Counters extends Component {
             id={counter.id}
             value={counter.value}
             onHandleIncrement={this.props.handleIncrement}
-            countera={this.props.countersApp}
+            countera={counter}
           />
         ))}
       </div>

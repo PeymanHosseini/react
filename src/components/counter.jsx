@@ -11,7 +11,9 @@ class Counter extends Component {
             </div>
             <div className="col-sm-10">
               <button
-                onClick={() => this.props.onHandleIncrement(this.props.id)}
+                onClick={() =>
+                  this.props.onHandleIncrement(this.props.countera)
+                }
                 type="button"
                 className="btn btn-success mr-2"
               >
