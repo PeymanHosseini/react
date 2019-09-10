@@ -8,11 +8,11 @@ class Counters extends Component {
         {this.props.countersApp.map(counter => (
           <Counter
             key={counter.id}
-            id={counter.id}
             value={counter.value}
-            onHandleIncrement={this.props.handleIncrement}
             countera={counter}
+            onHandleIncrement={this.props.handleIncrement}
             onHandleDecrement={this.props.handleDecrement}
+            onDelete={this.props.handleDelete}
           />
         ))}
       </div>
