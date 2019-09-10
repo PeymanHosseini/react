@@ -12,6 +12,13 @@ class App extends Component {
       { id: 4, value: 3 }
     ]
   };
+  handleReset = () => {
+    const counters = this.state.counters.map(c => {
+      c.value = 0;
+      return c;
+    });
+    this.setState({ counters });
+  };
   handleIncrement = counter => {
     const counters = [...this.state.counters];
     const index = counters.indexOf(counter);
@@ -34,7 +41,7 @@ class App extends Component {
     return (
       <main className="container">
         <Navbar />
-        <button type="button" className="btn  m-2">
+        <button type="button" className="btn  m-2" onClick={this.handleReset}>
           Reset
         </button>
 
