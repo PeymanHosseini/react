@@ -40,7 +40,9 @@ class App extends Component {
   render() {
     return (
       <main className="container">
-        <Navbar />
+        <Navbar
+          totalCount={this.state.counters.filter(c => c.value > 0).length}
+        />
         <button type="button" className="btn  m-2" onClick={this.handleReset}>
           Reset
         </button>
