@@ -6,10 +6,10 @@ class Counter extends Component {
       <div>
         <div className="container">
           <div className="row p-2 ">
-            <div className="col-sm-2">
+            <div className="col-1">
               <span className={this.getBadgeClass()}>{this.formatValue()}</span>
             </div>
-            <div className="col-sm-10">
+            <div className="col">
               <button
                 onClick={() =>
                   this.props.onHandleIncrement(this.props.countera)
@@ -25,6 +25,7 @@ class Counter extends Component {
                 onClick={() =>
                   this.props.onHandleDecrement(this.props.countera)
                 }
+                disabled={this.props.countera.value === 0 ? "disabled" : ""}
               >
                 -
               </button>

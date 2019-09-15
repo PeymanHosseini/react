@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
-import Navbar from "./components/navbar";
-import Counters from "./components/counters";
+import Navbar from "./components/counterComponents/navbar";
+import Counters from "./components/counterComponents/counters";
 
 class App extends Component {
   state = {
